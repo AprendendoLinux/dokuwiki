@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  dokuwiki:
+    image: aprendendolinux/dokuwiki:latest
+    restart: always
+    container_name: dokuwiki
+    volumes:
+    - dokuwiki:/var/www/html
+    ports:
+    - "80:80"
+volumes:
+  dokuwiki:
