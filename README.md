@@ -22,5 +22,5 @@ Se tiver qualquer dúvida, acesse meu site:
 
 Atenciosamente,
 
-**Henrique Fagundes**
+**Henrique Fagundes** \
 Analista de Suporte Gnu/Linux
