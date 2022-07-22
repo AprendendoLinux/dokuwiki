@@ -1,5 +1,7 @@
 FROM alpine:3.12
+
 ADD https://php.hernandev.com/key/php-alpine.rsa.pub /etc/apk/keys/php-alpine.rsa.pub
+
 RUN echo "https://php.hernandev.com/v3.11/php-7.4" >> /etc/apk/repositories && \
 	apk update && apk upgrade && apk add \
 	\
@@ -22,7 +24,11 @@ RUN echo "https://php.hernandev.com/v3.11/php-7.4" >> /etc/apk/repositories && \
 COPY default.conf /etc/nginx/conf.d/
 COPY dokuwiki.sh /opt/
 COPY php.ini /etc/php7/
+
 RUN chmod +x /opt/dokuwiki.sh
+
 WORKDIR /root
+
 EXPOSE 80
 ENTRYPOINT ["sh", "/opt/dokuwiki.sh"]
+
